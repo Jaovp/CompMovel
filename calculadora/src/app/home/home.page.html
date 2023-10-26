@@ -5,10 +5,12 @@
     <ion-item></ion-item>
     <ion-item></ion-item>
     <ion-item></ion-item>
-    <ion-item></ion-item>
+    <ion-item>
+      <ion-input class="visor" [(ngModel)]="visor"></ion-input>
+    </ion-item>
 
     <ion-item>
-      <ion-input [(ngModel)]="visor"></ion-input>
+      <ion-input [(ngModel)]="visorResultado"></ion-input>
     </ion-item>
 
     <ion-item>
@@ -16,15 +18,15 @@
         AC
       </ion-fab-button>
 
-      <ion-fab-button class="op2" (click)="adicionarOperacao(5)" (click)="calcular()">
+      <ion-fab-button class="op2" (click)="negativo()">
         +/-
       </ion-fab-button>
 
-      <ion-fab-button class="op2" (click)="adicionarOperacao(4)" (click)="calcular()">
+      <ion-fab-button class="op2" (click)="porcetagem()">
         %
       </ion-fab-button>
 
-      <ion-fab-button class="op1" (click)="adicionarOperacao(3)">
+      <ion-fab-button class="op1" [ngClass]="{ 'operacaoClick': ButtonClicked === 3 }" (click)="adicionarOperacao(3); isClicked(3)">
         ÷
       </ion-fab-button>
     </ion-item>
@@ -42,7 +44,7 @@
         9
       </ion-fab-button>
 
-      <ion-fab-button class="op1" (click)="adicionarOperacao(2)">
+      <ion-fab-button class="op1" [ngClass]="{ 'operacaoClick': ButtonClicked === 2 }" (click)="adicionarOperacao(2); isClicked(2)">
         x
       </ion-fab-button>
     </ion-item>
@@ -60,7 +62,7 @@
         6
       </ion-fab-button>
 
-      <ion-fab-button class="op1" (click)="adicionarOperacao(1)">
+      <ion-fab-button class="op1" [ngClass]="{ 'operacaoClick': ButtonClicked === 1 }" (click)="adicionarOperacao(1); isClicked(1);">
         -
       </ion-fab-button>
     </ion-item>
@@ -78,7 +80,7 @@
         3
       </ion-fab-button>
 
-      <ion-fab-button class="op1" (click)="adicionarOperacao(0)">
+      <ion-fab-button class="op1" [ngClass]="{ 'operacaoClick': ButtonClicked === 0 }" (click)="adicionarOperacao(0); isClicked(0)">
         +
       </ion-fab-button>
     </ion-item>

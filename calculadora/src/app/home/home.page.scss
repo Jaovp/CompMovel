@@ -9,12 +9,16 @@ ion-list{
 
 ion-fab-button, ion-button{
   margin: 0 auto;
-  margin-top: 3%;
+  margin-top: 2%;
   margin-bottom: 3%;
   width: 20%;
   font-size: 20pt;
   --background: #333333;
   --background-activated: #333333;
+}
+
+.visor{
+  font-size: 30px;
 }
 
 .op1{
@@ -26,6 +30,13 @@ ion-fab-button, ion-button{
   --background: #a5a5a5;
   --background-activated: #a5a5a5;
   --color: #050505;
+}
+
+.operacaoClick {
+  --background: #ffffff; 
+  --background-activated: #ffffff; 
+  --color: #ff9f0c;
+  --color-activated: #ff9f0c; 
 }
 
 #zero{
