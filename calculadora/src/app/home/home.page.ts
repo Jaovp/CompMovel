@@ -48,7 +48,7 @@ export class HomePage {
     } else if(valor === 2) {
       this.visor += '*';
     } else if(valor === 3) {
-      this.visor += '/';
+      this.visor += '÷';
     }
   }
 
