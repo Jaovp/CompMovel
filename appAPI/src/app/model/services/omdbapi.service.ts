@@ -16,15 +16,15 @@ export enum SearchType{
 export class OmdbapiService {
 
   url = 'http://www.omdbapi.com/';
-  apiKey = '141311ab';
+  apiKey = 'c5d7a1f2';
 
   constructor(private http : HttpClient) { }
 
   getAll(title : string, type : SearchType) : Observable<any> {
-    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&this.apiKey`);
+    return this.http.get(`${this.url}?s=${encodeURI(title)}&type=${type}&apiKey=${this.apiKey}`);
   }
 
   getById(id : any) : Observable<any> {
-    return this.http.get(`${this.url}?i=${id}&plot=full&this.apiKey`);
+    return this.http.get(`${this.url}?i=${id}&plot=full&apiKey=${this.apiKey}`);
   }
 }
